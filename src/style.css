@@ -1,0 +1,119 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(320deg, #ffe6ad, #ffc66b, #ffef60);
+    display: flex;
+    justify-content: center;
+  
+}
+.wrapper {
+    box-sizing: border-box;
+    margin-top: 50px;
+    background: rgba(230, 230, 230, 0.90);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    width: 330px;
+    height: 400px; 
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+  
+}
+
+.button, .screen {
+    background: rgba(245, 245, 245, 0.70);
+    border: 1px solid rgba(100, 100, 100, 0.35);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.50);
+    border-radius: 5px;
+    color: #363636;
+    font-size: 35px;
+  
+}
+.calc-buttons {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+.screen {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: column;
+  height: 60px;
+  overflow: auto;
+  padding-right: 10px;
+}
+.button-row {
+  flex-basis: 17%;
+  display: flex;
+  justify-content: space-between;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 23.75%;
+}
+.double {
+  flex-basis: 49.25%;
+}
+
+.button:last-child {
+  color: #ffffff;
+  background: #feab03; 
+}
+.button:last-child:hover {
+  background: inherit;
+  color: inherit;
+}
+.button:hover {
+  background: #feab03;
+}
+.button:active {
+  background: #c05d01;
+}
+.button:last-child:active {
+  background: #c05d01;
+  color: inherit;
+}
+
+.not-implemented {
+  background: grey !important;
+  color: rgb(184, 184, 184) !important;
+}
+.current-op {
+  background: #c05d01 !important;
+  color: rgb(184, 184, 184) !important;
+}
+.anim {
+  animation-name: bounce;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  animation-delay: 0s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+    transform: scale(100%);
+  }
+
+  50% {
+    transform: translate(0, -7px);
+    transform: scale(102%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+    transform: scale(100%);
+  }
+}
